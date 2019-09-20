@@ -1,0 +1,34 @@
+.br-15{
+    border-radius: 15px;
+}
+
+.offset-4-5{
+    margin-left: 37.5%;
+}
+
+.instruments{
+    background-image: url(../../assets/imgs/instruments.png);
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    padding-top: 75%
+}
+.musicians{
+    background-image: url(../../assets/imgs/band.png);
+    background-repeat: no-repeat;
+    background-size: 100% 85%;
+    padding-top: 75%
+}
+.calendar{
+    background-image: url(../../assets/imgs/calendar.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 85%;
+    padding-top: 75%
+}
+.custom-link:hover{
+    color: #b5a23f;
+    text-decoration: none
+}
+.custom-span:hover{
+    color: #b5a23f;
+    text-decoration: none
+}

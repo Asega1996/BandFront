@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { FooterComponent } from './footer/footer.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { InstrumentComponent } from './instrument/instrument.component';
+import { MusicianComponent } from './musician/musician.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +22,16 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     NotFoundComponent,
     CalendarComponent,
-    FooterComponent
+    FooterComponent,
+    WelcomeComponent,
+    InstrumentComponent,
+    MusicianComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
+    MatToolbarModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

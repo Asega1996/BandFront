@@ -1,1 +1,16 @@
-<mat-card>Simple card</mat-card>
+<div class="header mb-5 p-3">
+    <div class="row">
+        <div class="col-3 offset-1">
+            <a [routerLink]="['/']" routerLinkActive="router-link-active" >
+                <img height="50" src="../../assets/imgs/logo.png">
+            </a>
+        </div>
+        <div class="col-7 tabs is-centered is-fullwidth text-right">
+                <ul class="ul-menu">
+                  <li class="menu-item"><a routerLink="/calendar" routerLinkActive="router-link-active">Concerts</a></li>
+                  <li class="menu-item"><a routerLink="/instruments" routerLinkActive="router-link-active">Instruments</a></li>
+                  <li class="menu-item"><a routerLink="/musicians" routerLinkActive="router-link-active">Members</a></li>
+                </ul>
+        </div>
+    </div>
+</div>
