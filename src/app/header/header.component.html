@@ -6,11 +6,15 @@
             </a>
         </div>
         <div class="col-7 tabs is-centered is-fullwidth text-right">
-                <ul class="ul-menu">
-                  <li class="menu-item"><a routerLink="/calendar" routerLinkActive="router-link-active">Concerts</a></li>
-                  <li class="menu-item"><a routerLink="/instruments" routerLinkActive="router-link-active">Instruments</a></li>
-                  <li class="menu-item"><a routerLink="/musicians" routerLinkActive="router-link-active">Members</a></li>
-                </ul>
+                <button class="menu-btn" mat-icon-button [matMenuTriggerFor]="appMenu">
+                    <img width="20" src="../../assets/imgs/menu_white.png">
+                </button>
+                <mat-menu #appMenu="matMenu">
+                        <button mat-menu-item [routerLink]="['/calendar']" routerLinkActive="router-link-active" >Concerts</button>
+                        <button mat-menu-item [routerLink]="['/instruments']" routerLinkActive="router-link-active" >Instruments</button>
+                        <button mat-menu-item [routerLink]="['/musicians']" routerLinkActive="router-link-active" >Musicians</button>
+                </mat-menu>
         </div>
+
     </div>
 </div>

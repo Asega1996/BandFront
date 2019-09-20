@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from  '@angular/platform-browser/animations'
 
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
@@ -32,6 +35,9 @@ import { MusicianComponent } from './musician/musician.component';
     AppRoutingModule,
     MatCardModule,
     MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
