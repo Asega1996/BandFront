@@ -10,6 +10,13 @@ export class InstrumentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
+}
+
+export interface Instrument{
+  _id: String
+  name: String;
+  type: String;
 }
