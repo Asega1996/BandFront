@@ -14,8 +14,6 @@ const httpOptions = {
   };
 
 
-let musicians = {} as Musician[]
-
 @Injectable({
   providedIn: 'root',
 })
@@ -24,7 +22,6 @@ export class MusicianService {
     private api = environment.API_ROUTE;
 
     constructor(private http: HttpClient) { }
-
 
     getMusicians() {
         return this.http.get<Musician[]>(this.api + musiciansRoute,httpOptions).toPromise();
