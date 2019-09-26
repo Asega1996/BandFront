@@ -35,12 +35,13 @@ export class ConcertService {
       let concert = {} as Concert
       if(concertForm.get('_id').value != undefined) concert._id = concertForm.get('_id').value
       
+      console.log(concert._id)
       concert.name = concertForm.get('name').value
 
-      concert.dateStart = concertForm.get('dateStart').value;
+      concert.dateStart = new Date(concertForm.get('dateStart').value)
       concert.dateStart.setHours(concertForm.get('timeStart').value.hour)
       concert.dateStart.setMinutes(concertForm.get('timeStart').value.minute)
-      concert.dateEnd = concertForm.get('dateEnd').value
+      concert.dateEnd = new Date(concertForm.get('dateEnd').value)
       concert.dateEnd.setHours(concertForm.get('timeEnd').value.hour)
       concert.dateEnd.setMinutes(concertForm.get('timeEnd').value.minute)
 

@@ -62,17 +62,16 @@ export class CalendarComponent implements OnInit {
     this.dataSource.data = this.concerts;
   }
 
-  patchValue(element){
-    console.log(element)
+  patchValue(element : Concert){
     this.concertForm.patchValue({
-      firstName: element.firstName,
-      lastName: element.lastName,
-      phone: element.phone,
-      instrument: element.instrument,
+      name: element.name,
+      dateStart: element.dateStart,
+      dateEnd: element.dateEnd,
       _id: element._id
     })
-
-    console.log(this.concertForm)
+    this .timeStart = {"hour": new Date(element.dateStart).getHours(),"minute": new Date(element.dateStart).getMinutes()}
+    this.timeEnd = {"hour":  new Date(element.dateEnd).getHours(),"minute":  new Date(element.dateEnd).getMinutes()}
+  
   }
 
   async onSubmit(){
@@ -81,19 +80,16 @@ export class CalendarComponent implements OnInit {
       this.getConcerts();
     }
     this.concertForm.reset()
-    this.concertService.getConcerts()
-    this.reloadIrame();
+    this.concertService.getConcerts();
+    window.location.reload();
   }
 
   async deleteConcert(element){
     await this.concertService.deleteConcert(element._id);
     this.getConcerts();
-    this.reloadIrame()
+    window.location.reload();
   }
 
-  reloadIrame() {
-    document.getElementById('googleCalendar').ownerDocument.location.reload(true);
-  }
 
 }
 

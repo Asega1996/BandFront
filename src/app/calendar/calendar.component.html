@@ -15,13 +15,13 @@
           <!-- Name Column -->
           <ng-container matColumnDef="dateStart">
             <th mat-header-cell *matHeaderCellDef> {{ 'start at' | titlecase }} </th>
-            <td mat-cell *matCellDef="let element"> {{element.dateStart}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.dateStart | date:'yyyy-mm-dd HH:mm'}} </td>
           </ng-container>
         
           <!-- Weight Column -->
           <ng-container matColumnDef="dateEnd">
             <th mat-header-cell *matHeaderCellDef> {{ 'end at' | titlecase }} </th>
-            <td mat-cell *matCellDef="let element"> {{element.dateEnd}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.dateEnd | date:'yyyy-mm-dd HH:mm'}} </td>
           </ng-container>
       
       
