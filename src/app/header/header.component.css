@@ -1,0 +1,31 @@
+.ul-menu{
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+}
+.header{
+    background-color: #3f51b5 !important;
+    color: white !important;
+    font-weight: bold;
+    width: 100%;
+    
+}
+li.menu-item {
+    margin: 15px;
+}
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover{
+    color: #b5a23f;
+    text-decoration: none
+}
+.menu-btn{
+    vertical-align: middle;
+    margin-top: 10px;
+    background: transparent;
+    border: white 1px solid;
+    border-radius: 5px;
+}
